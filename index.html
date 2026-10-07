@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Industry - Industrial Solutions</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+    background:#fff;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1140px;
+    margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#222;
+    color:#fff;
+    padding:10px 0;
+    font-size:14px;
+}
+
+.topbar .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.social a{
+    margin-left:15px;
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    height:75px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+    color:#222;
+}
+
+.logo span{
+    color:#f9a825;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    font-size:14px;
+    font-weight:bold;
+    color:#333;
+}
+
+nav ul li a:hover{
+    color:#f9a825;
+}
+
+/* HERO */
+
+.hero{
+    height:650px;
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("https://teknoindustry.com/img/home-banner.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero h5{
+    color:#f9a825;
+    letter-spacing:2px;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+.hero h1{
+    font-size:55px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.8;
+    color:#eee;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#f9a825;
+    color:#fff;
+    font-weight:bold;
+    border-radius:2px;
+}
+
+.btn:hover{
+    background:#e69500;
+}
+
+/* SERVICES */
+
+.services{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#777;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.service{
+    text-align:center;
+    padding:30px;
+}
+
+.service-icon{
+    width:75px;
+    height:75px;
+    margin:auto;
+    border-radius:50%;
+    background:#f9a825;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.service h3{
+    margin-bottom:15px;
+}
+
+.service p{
+    color:#777;
+    line-height:1.7;
+}
+
+/* ABOUT */
+
+.about{
+    padding:90px 0;
+    background:#f7f7f7;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-img img{
+    width:100%;
+    display:block;
+}
+
+.about-text h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about-text h5{
+    color:#f9a825;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    color:#777;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+/* QUOTE */
+
+.quote{
+    min-height:500px;
+    background:
+    linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70)),
+    url("https://teknoindustry.com/img/quote-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+
+.quote-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.quote-text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.quote-text p{
+    line-height:1.8;
+    color:#ddd;
+}
+
+.quote-form{
+    background:#fff;
+    padding:35px;
+}
+
+.quote-form input,
+.quote-form textarea{
+    width:100%;
+    border:1px solid #ddd;
+    padding:14px;
+    margin-bottom:15px;
+    font-family:inherit;
+}
+
+.quote-form textarea{
+    height:120px;
+    resize:none;
+}
+
+.quote-form button{
+    border:0;
+    cursor:pointer;
+}
+
+/* MARKET */
+
+.market{
+    padding:90px 0;
+}
+
+.market-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.market-card{
+    background:#fff;
+    box-shadow:0 5px 25px rgba(0,0,0,.10);
+    overflow:hidden;
+}
+
+.market-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.market-content{
+    padding:25px;
+}
+
+.market-content h3{
+    margin-bottom:12px;
+}
+
+.market-content p{
+    color:#777;
+    line-height:1.7;
+}
+
+/* STATS */
+
+.stats{
+    padding:75px 0;
+    background:#f9a825;
+    color:#fff;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+}
+
+.stat h2{
+    font-size:45px;
+    margin-bottom:8px;
+}
+
+.stat p{
+    font-size:15px;
+}
+
+/* PROJECTS */
+
+.projects{
+    padding:90px 0;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.project{
+    position:relative;
+    overflow:hidden;
+}
+
+.project img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.project:hover img{
+    transform:scale(1.08);
+}
+
+.project-title{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    color:#fff;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+    padding:90px 0;
+    background:#f7f7f7;
+    text-align:center;
+}
+
+.testimonial-box{
+    max-width:750px;
+    margin:auto;
+}
+
+.testimonial-box p{
+    color:#777;
+    font-size:18px;
+    line-height:1.8;
+    font-style:italic;
+    margin-bottom:25px;
+}
+
+.testimonial-box h3{
+    margin-bottom:5px;
+}
+
+.testimonial-box span{
+    color:#f9a825;
+}
+
+/* BLOG */
+
+.blog{
+    padding:90px 0;
+}
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.blog-card{
+    border:1px solid #eee;
+}
+
+.blog-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-content small{
+    color:#f9a825;
+}
+
+.blog-content h3{
+    margin:12px 0;
+}
+
+.blog-content p{
+    color:#777;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    background:#222;
+    color:#fff;
+    padding:65px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:20px;
+}
+
+footer p,
+footer li{
+    color:#bbb;
+    line-height:1.8;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:7px;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #444;
+    margin-top:45px;
+    padding-top:20px;
+    color:#999;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav ul{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .service-grid,
+    .market-grid,
+    .project-grid,
+    .blog-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid,
+    .quote-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .topbar .container{
+        flex-direction:column;
+        gap:5px;
+    }
+
+    header{
+        height:auto;
+        padding:20px 0;
+    }
+
+    .nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero{
+        height:550px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .service-grid,
+    .market-grid,
+    .project-grid,
+    .blog-grid,
+    .stats-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        gap:35px;
+    }
+
+    .about-text h2,
+    .quote-text h2{
+        font-size:30px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container">
+        <div>
+            info@industry.com
+        </div>
+
+        <div class="social">
+            Follow Us:
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+    <div class="logo">
+        INDUSTRY<span>.</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#services">SERVICE</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#market">MARKET</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h5>DON'T LOOK FURTHER, HERE IS THE KEY</h5>
+
+<h1>We're Industrial Solution</h1>
+
+<p>
+We provide high quality technical assistance and
+complete industrial solutions for businesses around
+the world.
+</p>
+
+<a href="#services" class="btn">
+GET STARTED
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>What We Offer</h2>
+
+<p>
+Who are in extremely love with eco friendly system.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="service">
+
+<div class="service-icon">
+⚙
+</div>
+
+<h3>Maintenance</h3>
+
+<p>
+Professional maintenance services for
+industrial systems and equipment.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+🔧
+</div>
+
+<h3>Industrial Solutions</h3>
+
+<p>
+Reliable and modern solutions for
+all types of industrial requirements.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+🏭
+</div>
+
+<h3>Engineering</h3>
+
+<p>
+Advanced engineering services with
+professional technical support.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-img">
+
+<img src="https://teknoindustry.com/img/about.jpg"
+     alt="Industrial Engineering">
+
+</div>
+
+
+<div class="about-text">
+
+<h5>ABOUT US</h5>
+
+<h2>
+The Best Technical Assistance
+For Global Industrial Systems
+</h2>
+
+<p>
+We are providing complete industrial solutions
+with modern technology and professional
+engineering services.
+</p>
+
+<p>
+Our team is dedicated to delivering reliable,
+efficient and high-quality solutions for
+different industries.
+</p>
+
+<a href="#contact" class="btn">
+GET DETAILS
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+<div class="container quote-grid">
+
+<div class="quote-text">
+
+<h2>
+Looking For A Quality And Affordable Service For Your Project?
+</h2>
+
+<p>
+Send us your requirements and our professional
+team will contact you as soon as possible.
+</p>
+
+</div>
+
+
+<div class="quote-form">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Subject">
+
+<textarea placeholder="Message"></textarea>
+
+<button class="btn" type="submit">
+SEND MESSAGE
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MARKET SECTORS -->
+
+<section class="market" id="market">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Capturing Market Sectors</h2>
+
+<p>
+Who are in extremely love with eco friendly system..
+</p>
+
+</div>
+
+
+<div class="market-grid">
+
+
+<div class="market-card">
+
+<img src="https://teknoindustry.com/img/s1.jpg"
+     alt="Automotive Engineering">
+
+<div class="market-content">
+
+<h3>Automotive Engineering</h3>
+
+<p>
+Modern automotive engineering solutions
+for advanced industrial requirements.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="market-card">
+
+<img src="https://teknoindustry.com/img/s2.jpg"
+     alt="Construction Engineering">
+
+<div class="market-content">
+
+<h3>Construction & Engineering</h3>
+
+<p>
+Professional construction and engineering
+solutions for large projects.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="market-card">
+
+<img src="https://teknoindustry.com/img/s3.jpg"
+     alt="Industrial Engineering">
+
+<div class="market-content">
+
+<h3>Industrial Engineering</h3>
+
+<p>
+Advanced industrial engineering and
+technical assistance.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+
+<h2>2 K+</h2>
+
+<p>Projects Completed</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>5.5 K</h2>
+
+<p>Total Employees</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>959</h2>
+
+<p>Happy Clients</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>367</h2>
+
+<p>Tickets Submitted</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Recent Projects</h2>
+
+<p>
+Some of our latest industrial projects.
+</p>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div class="project">
+
+<img src="https://teknoindustry.com/img/p1.jpg"
+     alt="Industrial Project">
+
+<div class="project-title">
+Industrial Project
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img src="https://teknoindustry.com/img/p2.jpg"
+     alt="Engineering Project">
+
+<div class="project-title">
+Engineering Project
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img src="https://teknoindustry.com/img/p3.jpg"
+     alt="Construction Project">
+
+<div class="project-title">
+Construction Project
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIAL -->
+
+<section class="testimonial">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>What Our Clients Say</h2>
+
+</div>
+
+
+<div class="testimonial-box">
+
+<p>
+"Excellent service and professional technical
+assistance. Their team helped us complete our
+project successfully."
+</p>
+
+<h3>Fannie Rowe</h3>
+
+<span>Client</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BLOG -->
+
+<section class="blog" id="blog">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Latest From Our Blog</h2>
+
+<p>
+Latest news and updates from our industry.
+</p>
+
+</div>
+
+
+<div class="blog-grid">
+
+
+<div class="blog-card">
+
+<img src="https://teknoindustry.com/img/b1.jpg"
+     alt="Industry Blog">
+
+<div class="blog-content">
+
+<small>INDUSTRY NEWS</small>
+
+<h3>
+The Future Of Industrial Engineering
+</h3>
+
+<p>
+Discover modern technologies changing
+the industrial world.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="blog-card">
+
+<img src="https://teknoindustry.com/img/b2.jpg"
+     alt="Engineering Blog">
+
+<div class="blog-content">
+
+<small>ENGINEERING</small>
+
+<h3>
+Modern Engineering Solutions
+</h3>
+
+<p>
+Learn how technology is improving
+industrial processes.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="blog-card">
+
+<img src="https://teknoindustry.com/img/b3.jpg"
+     alt="Construction Blog">
+
+<div class="blog-content">
+
+<small>CONSTRUCTION</small>
+
+<h3>
+Building A Better Future
+</h3>
+
+<p>
+New ideas and solutions for
+future construction projects.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>Industry</h3>
+
+<p>
+The best technical assistance for global
+industrial systems and engineering solutions.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Services</h3>
+
+<ul>
+
+<li>Industrial Solutions</li>
+<li>Engineering</li>
+<li>Maintenance</li>
+<li>Construction</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<ul>
+
+<li>info@industry.com</li>
+<li>+92 300 0000000</li>
+<li>Pakistan</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+Copyright © 2026 Industry. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
